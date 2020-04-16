@@ -26,6 +26,6 @@ fi
 essentials=(numpy matplotlib pandas seaborn ipython jupyter 
     flake8 black black-macchiato pytest)
 
-pip install --upgrade pip
-pip install "${essentials[@]}"
-python -m ipykernel install --user --name="IPython-${version_name}"
+PYENV_VERSION=${version_name} pyenv exec pip install --upgrade pip
+PYENV_VERSION=${version_name} pyenv exec pip install "${essentials[@]}"
+PYENV_VERSION=${version_name} pyenv exec python -m ipykernel install --user --name="IPython-${version_name}"
