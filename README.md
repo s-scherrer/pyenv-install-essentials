@@ -27,8 +27,7 @@ jupyter web interface.
 Just copy the content of this repository to
 `$PYENV_ROOT/plugins/pyenv-science-essentials`, e.g. by
 ```
-cd $PYENV_ROOT/plugins
-git clone git@github.com:s-scherrer/pyenv-install-essentials.git
+git clone git@github.com:s-scherrer/pyenv-install-essentials.git $(pyenv root)/plugins/pyenv-install-essentials
 ```
 
 ## Uninstall IPython kernels
