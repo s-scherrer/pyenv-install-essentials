@@ -19,11 +19,13 @@ fi
 
 version_name="$1"
 
-if [ -z version_name ]; then
+if [ -z "${version_name}" ]; then
     version_name=${PYENV_VERSION}
 fi
 
-essentials=(numpy matplotlib pandas seaborn ipython jupyter 
+echo "Installing essential packages into environment ${version_name}"
+
+essentials=(numpy matplotlib pandas seaborn ipython jupyter ipykernel
     flake8 black black-macchiato pytest)
 
 PYENV_VERSION=${version_name} pyenv exec pip install --upgrade pip
